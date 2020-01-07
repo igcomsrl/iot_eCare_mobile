@@ -1,0 +1,21 @@
+<ion-tabs class="tabs-icon-top tabs-positive">
+        <!-- <ion-tab title="Dispositivi" icon-on="ion-document-text" icon-off="ion-document" ui-sref="app.deviceHub.device">
+                <ion-nav-view name="device"></ion-nav-view>
+        </ion-tab> -->
+        <div ng-show="isBluetoothEnabled">
+                        <ion-tab title="Dispositivi associati" icon-on="ion-bluetooth" icon-off="ion-bluetooth" ui-sref="app.deviceHub.paried">
+                                        <ion-nav-view name="paried"></ion-nav-view>
+                                </ion-tab>
+                
+                        <!-- <ion-tab title="Cerca dispositivi" icon-on="ion-search" icon-off="ion-ios-search" ui-sref="app.deviceHub.scan">
+                                <ion-nav-view name="scan"></ion-nav-view>
+                        </ion-tab>  -->
+        </div>
+        <!-- <div ng-show="!isBluetoothEnabled">
+                <h1>Bluetooth disabilitato!</h3>
+                <h4>Per comunicare con i dispositivi é necessario abilitare il bluetooth</h2>
+                <button class="button button-positive button-full" ng-click="enableBluetooth()">Abilita</button>
+        </div> -->
+       
+
+</ion-tabs>

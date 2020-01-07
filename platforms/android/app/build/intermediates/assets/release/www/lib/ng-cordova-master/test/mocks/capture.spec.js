@@ -1,0 +1,1 @@
+describe("ngCordovaMocks",function(){beforeEach(function(){module("ngCordovaMocks")}),describe("cordovaCapture",function(){beforeEach(inject(function(_$timeout_,_$rootScope_,_$cordovaCapture_){_$cordovaCapture_,_$timeout_,_$rootScope_})),it("should do something",function(){})})});

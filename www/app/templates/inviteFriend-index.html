@@ -1,0 +1,44 @@
+<ion-view view-title="Persone già invitate">
+  <!-- <ion-spinner ng-if="isFetchBusy" class="spinner-center spinner-light" icon="ripple"></ion-spinner> -->
+  <ion-content>
+    <!-- <ion-refresher pulling-text="Rilascia per aggiornare" refreshing-text="Caricamento.." spinner="ripple"
+      on-refresh="doInvitedFriendRefresh()">
+    </ion-refresher> -->
+    
+
+    <div ng-if="!isFetchBusy && inviteFriendList.length == 0">
+      Non hai ancora invitato nessuno..
+      <br /> 
+      <!-- <button class="button button-positive button-full" ng-click="scan()">Cerca dispositivi</button> -->
+    </div>
+
+    <ion-list>
+      <div ng-repeat="item in inviteFriendList">
+          <ion-item class="item-divider font-18">
+              Informazioni su {{item.firstname}} {{item.surname}}
+            </ion-item>
+            <ion-item class="item-icon-left">
+              <i class="icon ion-at"></i>
+              <span ng-bind="item.email"></span>
+            </ion-item>
+      
+            <ion-item class="item-icon-left">
+              <i class="icon ion-edit"></i>
+              <span ng-bind="item.firstname"></span>
+            </ion-item>
+      
+            <ion-item class="item-icon-left">
+              <i class="icon ion-edit"></i>              
+              <span ng-bind="item.surname"></span>
+            </ion-item>
+            <ion-toggle ng-model="item.showPeso" ng-change="update(item)" toggle-class="toggle-calm">Peso</ion-toggle>
+            <ion-toggle ng-model="item.showGlicemia" ng-change="update(item)" toggle-class="toggle-calm">Glicemia</ion-toggle>
+            <ion-toggle ng-model="item.showFrequenza" ng-change="update(item)" toggle-class="toggle-calm">Frequenza</ion-toggle>
+            <ion-toggle ng-model="item.showPressione" ng-change="update(item)" toggle-class="toggle-calm">Pressione</ion-toggle>
+            <ion-toggle ng-model="item.showTemperatura" ng-change="update(item)" toggle-class="toggle-calm">Temperatura</ion-toggle>
+            <ion-toggle ng-model="item.showOssigeno" ng-change="update(item)" toggle-class="toggle-calm">Ossigeno</ion-toggle>
+            <ion-toggle ng-model="item.showCamera" ng-change="update(item)" toggle-class="toggle-calm">Movimento</ion-toggle>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

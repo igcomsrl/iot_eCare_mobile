@@ -1,0 +1,12 @@
+<ion-view view-title="Andamento">
+  <ion-nav-buttons side="right">
+    <button ng-show="showRefresh" class="button button-positive button-icon ion-refresh" ng-click="reloadDashboard()"></button>
+  </ion-nav-buttons>
+  <ion-content>    
+    <iframe id="iframeDashboard" ng-src="{{getPatientDashboardUrl}}"
+      style="border: 0; width: 100%; min-height: 768px;" onload="hide()"></iframe>
+      <div>
+          Premi due volte il grafico per andare indietro nel tempo
+        </div>
+  </ion-content>
+</ion-view>

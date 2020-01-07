@@ -1,0 +1,108 @@
+<ion-view view-title="Semprevicini">
+    <style>
+        .img-center-mid {
+          max-width: 200px;
+          max-height: 200px;
+          margin-top: 25px;
+          margin-left: auto;
+        margin-right: auto;
+        display: block;
+        
+        }
+        .bold{
+          font-weight:bold
+        }
+        .bg-image{
+          /* position: relative;
+          z-index: 1; */
+        }
+        .bg-image {
+          /* background-image: url('../img/background_1.jpg');*/
+          /* background-image: url('../img/black-linen.png'); */
+          /* background-image: url('../img/brushed-alum.png');*/
+        background-image: url('img/gradiente-di-sfondo_1159-750.jpg');          
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+          /* background-color: #e8e6fa; */
+        }
+        .bg-trasparent{
+          background-color: transparent!important;
+        }
+      </style>
+    <!-- <ion-header-bar align-title="left" class="bar-positive">
+  
+        <ion-nav-back-button>
+          </ion-nav-back-button>
+     
+        <h1 class="title">Title!</h1>
+        <div class="buttons">
+          <button class="button">Right Button</button>
+        </div>
+      </ion-header-bar> -->
+  <ion-content class="bg-image" style="font-size:14px">
+    <div class="row">
+      
+      <div class="col col-50">
+        <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.andamento">
+          <img class="full-image img-center-mid" src="img/Andamento.png">
+          <p class="text-center bold white font-18" style="color:white;">
+            Andamento
+          </p>
+        </div>
+      </div>
+
+      <div class="col col-50">
+        <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.bugiardino">
+          <img class="full-image img-center-mid" src="img/Bugiardino.png">
+          <p class="text-center bold font-18" style="color:white">
+            Bugiardino online
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col col-50">
+        <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.profilo">
+          <img class="full-image img-center-mid" src="img/Profilo.png">
+          <p class="text-center bold font-18" style="color:white">
+            Profilo
+          </p>
+        </div>
+
+      </div>
+      <div class="col col-50">
+        <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.deviceHub.paried">
+          <img class="full-image img-center-mid" src="img/Rilevazione.png">
+          <p class="text-center bold font-18" style="color:white">
+            Rilevazione
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.videochiamata">
+          <img class="full-image img-center-mid" src="img/Videochiamata.png">
+          <p class="text-center bold font-18" style="color:white">
+            Videochiamata
+          </p>
+        </div>
+
+      </div>
+      <div class="col col-50">
+          <div class="item item-body bg-trasparent" style="border:none;" ui-sref="app.help">
+            <img class="full-image img-center-mid" src="img/Help.png">
+            <p class="text-center bold font-18" style="color:white">
+              Aiuto
+            </p>
+          </div>
+  
+        </div>
+    </div>
+   
+  </ion-content>
+</ion-view>

@@ -1,0 +1,43 @@
+.bg-image {
+    /* background-image: url('../img/background_1.jpg');*/
+    /* background-image: url('../img/black-linen.png'); */
+    /* background-image: url('../img/brushed-alum.png');*/
+    background-image: url('../img/gradiente-di-sfondo_1159-750.jpg');
+    
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    /* background-color: #e8e6fa; */
+  }
+  .bg-trasparent{
+    background-color: transparent!important;
+  }
+
+  .item-userpic-container {
+    color: white;
+    background-color: transparent !important;
+    border: none;
+}
+
+.font-18{
+  font-size:18px!important;
+}
+
+.bg-success{
+  background-color: #33cd5f!important;
+}
+
+.text-error{
+  color: #e42112!important;
+}
+
+.text-success{
+  color: #33cd5f!important;
+}
+
+
+.input-blue{
+  border-color: blue !important;
+  border-bottom: solid 1px !important;
+}

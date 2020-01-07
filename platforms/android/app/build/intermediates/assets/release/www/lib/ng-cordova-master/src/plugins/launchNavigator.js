@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.launchNavigator",[]).factory("$cordovaLaunchNavigator",["$q",function($q){return{navigate:function(destination,start,options){var q=$q.defer();return launchnavigator.navigate(destination,start,function(){q.resolve()},function(error){q.reject(error)},options),q.promise}}}]);

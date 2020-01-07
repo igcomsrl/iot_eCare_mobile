@@ -1,0 +1,1 @@
+angular.module("demo.appRate.ctrl",[]).controller("AppRateCtrl",["$scope","$log","$cordovaAppRate",function($scope,$log,$cordovaAppRate){$scope.promptRating=function(){$cordovaAppRate.promptForRating(!0).then(function(result){},function(error){})}}]);

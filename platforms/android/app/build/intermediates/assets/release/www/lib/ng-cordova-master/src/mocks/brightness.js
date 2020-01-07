@@ -1,0 +1,1 @@
+ngCordovaMocks.factory("$cordovaBrightness",["$q",function($q){var currentBrightness=100;return{get:function(){var q=$q.defer();return q.resolve(currentBrightness),q.promise},set:function(data){var q=$q.defer();return currentBrightness=data,q.resolve("OK"),q.promise},setKeepScreenOn:function(bool){var q=$q.defer();return q.resolve("OK"),q.promise}}}]);

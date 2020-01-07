@@ -1,0 +1,1 @@
+ngCordovaMocks.factory("$cordovaKeyboard",function(){var isVisible=!1;return{hideAccessoryBar:function(bool){},close:function(){isVisible=!1},show:function(){isVisible=!0},disableScroll:function(bool){},isVisible:function(){return isVisible}}});

@@ -1,0 +1,51 @@
+
+<ion-view view-title="Impostazioni"> 
+                <ion-content>
+                  <ion-list>
+                    <ion-item class="item-divider font-18">
+                      Raspberry IP
+                    </ion-item>
+                    <ion-item class="item-icon-left">
+                      <i class="icon ion-wifi"></i>
+                      <input type="text" placeholder="Indirizzo ip" ng-change="setRaspberryIp()" ng-model="model.raspberryIp">
+                    </ion-item>    
+
+                    <!-- <ion-item class="item-divider font-18">
+                      Mac pulsossimetro
+                    </ion-item>
+                    <ion-item class="item-avatar">                      
+                      <img src="img/pulsossimetro.jpg">
+                      <input type="text" placeholder="Digitare il mac address" ng-change="setMacPulsossimetro()" ng-model="model.macPulsossimetro" >
+                    </ion-item>   
+
+                    <ion-item class="item-divider font-18">
+                      Mac glucometro
+                    </ion-item>
+                    <ion-item class="item-avatar">
+                      <img src="img/glucometro.jpg">
+                      <input type="text" placeholder="Digitare il mac address" ng-change="setMacGlucometro()" ng-model="model.macGlucometro">
+                    </ion-item>    -->
+                    
+                    <!-- <ion-toggle ng-model="model.pushNotification" ng-disabled="true" ng-click="setPushNotification()" toggle-class="toggle-calm">Notifiche rilevazioni</ion-toggle>
+
+                    <ion-toggle ng-model="model.parameterotification" ng-click="setParameterNotification()" toggle-class="toggle-calm">Ricordami quando fare le rilevazioni</ion-toggle> -->
+
+                    <!-- <ion-toggle ng-model="model.vibrationOnNotification" ng-click="setVibrationOnNotification()" toggle-class="toggle-calm">Vibrazione notifica</ion-toggle> -->
+
+                    <!-- <ion-item class="item-divider font-18">
+                      Bilancia (Mac virtual)
+                    </ion-item>
+                    <ion-item class="item-icon-left" ng-repeat="item in bilanciaMacFakes">
+                      <i class="icon ion-wifi"></i>
+                      <input type="text" placeholder="Nome ospite"  ng-model="item.name" disabled>
+                      <input type="text" placeholder="Mac fake"  ng-model="item.macFakes" disabled>
+                    </ion-item>  
+                    <ion-item class="item-icon-left"> 
+                      <i class="icon ion-wifi"></i>
+                      <input type="text" placeholder="Nome ospite"  ng-model="model.name">
+                      <input type="text" placeholder="Mac fake"  ng-model="model.macFakes">
+                      <button class="button button-small button-positive" style="margin-top:2px;" ng-click="sendPulsossimetro(item)">Salva</button>
+                    </ion-item>   -->
+                  </ion-list>
+                </ion-content>
+        </ion-view>

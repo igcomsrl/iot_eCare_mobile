@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.pinDialog",[]).factory("$cordovaPinDialog",["$q","$window",function($q,$window){return{prompt:function(message,title,buttons){var q=$q.defer();return $window.plugins.pinDialog.prompt(message,function(res){q.resolve(res)},title,buttons),q.promise}}}]);

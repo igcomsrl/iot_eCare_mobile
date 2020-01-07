@@ -1,0 +1,1 @@
+angular.module("demo.socialSharing.ctrl",[]).controller("SocialSharingCtrl",["$scope","$log","$cordovaPreferences",function($scope,$log,$cordovaPreferences){}]);

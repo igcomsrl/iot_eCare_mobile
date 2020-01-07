@@ -1,0 +1,69 @@
+<ion-view view-title="Profilo"> 
+        <ion-content>
+                <ion-list>
+                        <ion-item class="item-divider font-18">
+                            I miei dati
+                        </ion-item>
+                        <ion-item>
+                            {{processInstanceModel.patient.firstname}}
+                            {{processInstanceModel.patient.surname}}
+                            <br>
+                            {{processInstanceModel.patient.municipalityPlace}}
+                            <br>
+                            {{processInstanceModel.patient.municipalityPlaceAddress}}
+                            <br>
+                            {{processInstanceModel.patient.municipalityPlaceCap}}
+                            
+                        </ion-item>
+                        <!-- <ion-item class="item-divider font-18">
+                            Persone di riferimento
+                        </ion-item>
+                        <ion-item>
+                            {{processInstanceModel.patient.surname}}
+                            {{processInstanceModel.patient.firstname}}
+                            <br>
+                            {{processInstanceModel.patient.mobilePhone}}
+                            <br>
+                            {{processInstanceModel.patient.email}}
+                        </ion-item>
+                        <ion-item class="item-divider font-18">
+                            Medico di riferimento
+                        </ion-item>
+                        <ion-item>
+                            {{processInstanceModel.doctor.surname}}
+                            {{processInstanceModel.doctor.firstname}}
+                            <br>
+                            {{processInstanceModel.doctor.mobilePhone}}
+                            <br>
+                            {{processInstanceModel.doctor.email}}
+                        </ion-item> -->
+
+
+                        <ion-item class="item-divider font-18">
+                                Dottori
+                              </ion-item>
+                              <ion-item ng-repeat="item in processInstanceModel.doctors">
+                                  {{item.surname}}
+                                  {{item.firstname}}
+                                  <br>
+                                  {{item.mobilePhone}}
+                              </ion-item>
+                              <ion-item class="item-divider font-18">
+                                Familiari
+                              </ion-item>
+                              <ion-item  ng-repeat="item in processInstanceModel.referencePersons">
+                                  {{item.surname}}
+                                  {{item.firstname}}
+                                  <br>
+                                  {{item.mobilePhone}}
+                              </ion-item>
+
+                        <ion-item class="item-divider font-18">
+                            Parametri monitorati
+                        </ion-item>
+                        <ion-item ng-repeat="item in processInstanceModel.process.parameters">
+                            {{item.name}} (Ogni: {{item.frequency}} {{item.frequencyType.description}})
+                        </ion-item>
+                    </ion-list>
+        </ion-content>
+</ion-view>

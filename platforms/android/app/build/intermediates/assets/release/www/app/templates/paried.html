@@ -1,0 +1,76 @@
+<ion-view title="Dispositivi associati">
+
+        <ion-nav-buttons side="right">
+                <button class="button button-positive button-icon ion-unlocked"
+                        ng-click="toggleInsertFields()"></button>
+        </ion-nav-buttons>
+        <ion-spinner ng-if="isPariedBusy" class="spinner-center spinner-light" icon="ripple"></ion-spinner>
+        <ion-content has-bouncing="true">
+                <ion-refresher pulling-text="Rilascia per aggiornare" refreshing-text="Caricamento.." spinner="ripple"
+                        on-refresh="doPariedRefresh()">
+                </ion-refresher>
+
+                <div class="list">
+                        <div class="item item-avatar item-button-right" ng-class="{'bg-success': item.connected}"
+                                ng-repeat="item in deviceModelList | orderBy: 'name' track by $index">
+                                <img ng-src="{{item.img}}">
+                                <h2>{{item.name}}</h2>
+                                <p ng-show="item.connected">
+                                        Stato: Sto comunicando...
+                                </p>
+                                <p ng-show="!item.connected && item.macAddress && item.isPairied" class="text-success">
+                                        Stato: In attesa di rilevazione.
+                                </p>
+                                <p ng-show="!item.macAddress && item.isPairied && item.name != 'Samsung Galaxy Watch'" class="text-error">
+                                        Stato: Inserire il mac address.
+                                </p>
+
+                                <p ng-show="!item.isPairied" class="text-error">
+                                        Stato: Associazione non eseguita.
+                                </p>
+                                <p ng-show="item.macAddress && !item.isMacAddressValid && item.isPairied && item.name != 'Samsung Galaxy Watch'"
+                                        class="text-error">
+                                        Stato: Mac address errato!
+                                </p>
+                                <!-- <div>
+                                        <button ng-show="item.macAddress" class="button button-small button-positive" style="margin-top:2px;"
+                                                ng-click="doParing(item)">Associa dispositivo</button>
+                                </div> -->
+                                <div ng-show="canInsertFields && item.name != 'Samsung Galaxy Watch'">
+                                        <p>Mac: </p>
+                                        <!-- <p ng-show="!canInsertFields">{{item.macAddress}}</p> -->
+                                        <input type="text" class="input-blue" placeholder="MacAddress"
+                                                ng-model="item.macAddress"
+                                                ng-change="onDeviceModelChange(item, item.localStorageKey)"
+                                                ng-model-options="{ updateOn: 'blur' }" ng-keyup="cancel($event)">
+
+                                        <p>Mac Fake: </p>
+                                        <!-- <p ng-show="!canInsertFields">{{item.macAddressFake}}</p> -->
+                                        <input type="text" class="input-blue" placeholder="MacAddress Fake"
+                                                ng-model="item.macAddressFake"
+                                                ng-change="onDeviceModelChange(item, item.localStorageKey)"
+                                                ng-model-options="{ updateOn: 'blur' }" ng-keyup="cancel($event)">
+                                </div>
+
+
+                                <div ng-show="item.name == 'Glucometro' && item.macAddress">
+                                        <input type="text" class="input-blue"
+                                                placeholder="Inserire il glucosio rilevato"
+                                                ng-model="data.glucosioManuale">
+                                        <button class="button button-small button-positive" style="margin-top:2px;"
+                                                ng-click="sendGlucometro(item)">Invia
+                                                dato</button>
+                                </div>
+                                <div ng-show="item.name == 'Pulsossimetro' && item.macAddress">
+                                        <input type="text" class="input-blue" placeholder="Inserire l'ossigeno rilevato"
+                                                ng-model="data.ossigenoManuale">
+                                        <input type="text" class="input-blue" placeholder="Inserire i battiti rilevati"
+                                                ng-model="data.battitiManuale">
+
+                                        <button class="button button-small button-positive" style="margin-top:2px;"
+                                                ng-click="sendPulsossimetro(item)">Invia dato</button>
+                                </div>
+                        </div>
+                </div>
+        </ion-content>
+</ion-view>

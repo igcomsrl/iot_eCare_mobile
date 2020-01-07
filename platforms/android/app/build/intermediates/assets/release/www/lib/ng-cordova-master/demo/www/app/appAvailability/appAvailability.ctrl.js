@@ -1,0 +1,1 @@
+angular.module("demo.appAvailability.ctrl",[]).controller("AppAvailabilityCtrl",["$scope","$log","$cordovaPreferences",function($scope,$log,$cordovaPreferences){}]);

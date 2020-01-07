@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.imagePicker",[]).factory("$cordovaImagePicker",["$q","$window",function($q,$window){return{getPictures:function(options){var q=$q.defer();return $window.imagePicker.getPictures(function(results){q.resolve(results)},function(error){q.reject(error)},options),q.promise}}}]);

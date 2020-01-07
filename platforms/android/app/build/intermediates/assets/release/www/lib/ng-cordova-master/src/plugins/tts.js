@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.tts",[]).factory("$cordovaTTS",function(){return{speak:function(text,onfulfilled,onrejected){return TTS.speak(text,onfulfilled,onrejected)}}});

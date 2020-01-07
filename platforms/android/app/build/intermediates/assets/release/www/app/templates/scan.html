@@ -1,0 +1,26 @@
+<ion-view title="Trova dispositivi">
+<!-- 
+        <ion-nav-buttons side="right">
+            <button class="button button-positive button-icon ion-plus-circled" ng-click="editPersonalNotesModal.show()"></button>
+        </ion-nav-buttons> -->
+        <ion-spinner ng-if="isScanBusy" class="spinner-center spinner-light" icon="ripple"></ion-spinner>
+        <ion-content has-bouncing="true">
+            <ion-refresher pulling-text="Rilascia per aggiornare"
+                           refreshing-text="Caricamento.."
+                           spinner="ripple" 
+                           on-refresh="doScanRefresh()"></ion-refresher>
+                           <div ng-if="!isScanBusy && deviceScanFounded.length == 0">
+                                   Nessun dispositivo rilevato..
+                                   <br/>
+                                   <button class="button button-positive button-full" ng-click="scan()">Cerca dispositivi</button>
+                                </div>
+            <div class="list">
+                <div class="item item-avatar" ng-repeat="item in deviceScanFounded | orderBy: 'name' track by $index" ng-click="doParing(item)">
+                        <img ng-src="{{item.img}}">
+                                <h2>{{item.name}}</h2>
+                                <p>Mac address: {{item.macAddress}}</p>
+                                <p>Modello: {{item.model}}</p>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>

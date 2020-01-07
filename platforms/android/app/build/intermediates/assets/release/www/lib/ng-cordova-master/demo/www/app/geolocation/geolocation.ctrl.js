@@ -1,0 +1,1 @@
+angular.module("demo.geolocation.ctrl",[]).controller("GeolocationCtrl",["$scope","$cordovaGeolocation",function($scope,$cordovaGeolocation){$scope.getLocation=function(){$cordovaGeolocation.getCurrentPosition({timeout:1e4,enableHighAccuracy:!1}).then(function(position){$scope.position=position},function(err){$scope.errorMsg="Error : "+err.message})}}]);

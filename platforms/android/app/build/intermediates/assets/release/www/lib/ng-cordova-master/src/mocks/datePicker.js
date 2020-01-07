@@ -1,0 +1,1 @@
+ngCordovaMocks.factory("$cordovaDatePicker",["$q",function($q){return{show:function(options){var q=$q.defer();return options=options||{date:new Date,mode:"date"},q.resolve(options.date),q.promise}}}]);

@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.zip",[]).factory("$cordovaZip",["$q","$window",function($q,$window){return{unzip:function(source,destination){var q=$q.defer();return $window.zip.unzip(source,destination,function(isError){0===isError?q.resolve():q.reject()},function(progressEvent){q.notify(progressEvent)}),q.promise}}}]);

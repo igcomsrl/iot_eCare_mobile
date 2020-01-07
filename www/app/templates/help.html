@@ -1,0 +1,46 @@
+<ion-view view-title="Aiuto"> 
+        <ion-content>
+          <ion-list>
+            <ion-item class="item-divider font-18">
+              Segnala un guasto al dispositivo (whatsapp)
+            </ion-item>
+            <ion-item class="item-icon-left font-18">
+              <i class="icon ion-social-whatsapp"></i>
+              <a ng-href="https://api.whatsapp.com/send?phone=39{{operativeCenterPhoneNumber}}&text=Salve, vorrei segnalare un guasto al dispositivo...">
+                Contatta la centrale operativa al numero:
+                <br>
+                {{operativeCenterPhoneNumber}}
+              </a>
+            </ion-item>
+
+            <ion-item class="item-divider font-18">
+              Chiedi aiuto al medico (whatsapp)
+            </ion-item>
+            <ion-item class="item-icon-left font-18" ng-repeat="item in processInstanceModel.doctors"> 
+              <i class="icon ion-social-whatsapp"></i>
+              <a ng-href="https://api.whatsapp.com/send?phone=39{{processInstanceModel.doctor.mobilePhone}}&text=Salve Dottore, non mi sento molto bene...">
+                Contatta il Dr.
+                {{item.surname}}
+                {{item.firstname}}
+                <br>
+                al numero:
+                {{item.mobilePhone}}
+              </a>
+            </ion-item>
+            <ion-item class="item-divider font-18">
+              Chiedi aiuto ad un familiare (whatsapp)
+            </ion-item>
+            <ion-item class="item-icon-left font-18"  ng-repeat="item in processInstanceModel.referencePersons">
+              <i class="icon ion-social-whatsapp"></i>
+              <a ng-href="https://api.whatsapp.com/send?phone=39{{processInstanceModel.doctor.mobilePhone}}&text=Ciao, non mi sento molto bene...">
+                Contatta il Dr.
+                {{item.surname}}
+                {{item.firstname}}
+                <br>
+                al numero:
+                {{item.mobilePhone}}
+              </a>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+</ion-view>

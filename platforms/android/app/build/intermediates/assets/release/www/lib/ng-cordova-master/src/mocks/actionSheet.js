@@ -1,0 +1,1 @@
+ngCordovaMocks.factory("$cordovaActionSheet",["$q",function($q){return{throwsError:!1,show:function(){var defer=$q.defer();return this.throwsError?defer.reject("There was an error on showing action sheet"):defer.resolve(),defer.promise}}}]);

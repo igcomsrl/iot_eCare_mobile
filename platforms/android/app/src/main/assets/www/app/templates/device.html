@@ -1,0 +1,41 @@
+<ion-view title="Dispositivi">
+
+        <ion-spinner ng-if="model.isBusy" class="spinner-center spinner-light" icon="ripple"></ion-spinner>
+        <ion-content has-bouncing="true">
+                <!-- <ion-refresher pulling-text="Rilascia per aggiornare" refreshing-text="Caricamento.." spinner="ripple"
+                        on-refresh="doRefresh()"></ion-refresher> -->
+                <div class="list">
+                        <div class="item">
+                                <h2>Bilancia</h2>
+                                <p>Mac address: {{bilanciaModel.macAddress}}</p>
+                                <p>Associata il: {{bilanciaModel.paringDate}}</p>
+                                <p>Modello: {{bilanciaModel.model}}</p>
+                        </div>
+                        <div class="item">
+                                <h2>Termometro</h2>
+                                <p>Mac address: {{termometroModel.macAddress}}</p>
+                                <p>Associata il: {{termometroModel.paringDate}}</p>
+                                <p>Modello: {{bilanciaModel.model}}</p>
+                        </div>
+                        <div class="item">
+
+                                <h2>Sfignomanometro</h2>
+                                <p>Mac address: {{sfignomanometroModel.macAddress}}</p>
+                                <p>Associata il: {{bilanciaModel.paringDate}}</p>
+                                <p>Modello: {{bilanciaModel.model}}</p>
+                        </div>
+                        <div class="item">
+                                <h2>Pulsossimetro</h2>
+                                <p>Mac address: {{pulsossimetroModel.macAddress}}</p>
+                                <p>Associata il: {{pulsossimetroModel.paringDate}}</p>
+                                <p>Modello: {{bilanciaModel.model}}</p>
+                        </div>
+                        <div class="item">
+                                <h2>Glucometro</h2>
+                                <p>Mac address: {{glucometroModel.macAddress}}</p>
+                                <p>Associata il: {{glucometroModel.paringDate}}</p>
+                                <p>Modello: {{bilanciaModel.model}}</p>
+                        </div>
+                </div>
+        </ion-content>
+</ion-view>

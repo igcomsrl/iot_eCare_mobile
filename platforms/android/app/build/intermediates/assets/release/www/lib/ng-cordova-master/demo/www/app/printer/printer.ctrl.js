@@ -1,0 +1,1 @@
+angular.module("demo.printer.ctrl",[]).controller("PrinterCtrl",["$scope","$log","$cordovaPreferences",function($scope,$log,$cordovaPreferences){}]);

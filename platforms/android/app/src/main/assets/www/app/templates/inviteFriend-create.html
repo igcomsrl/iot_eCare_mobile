@@ -1,0 +1,54 @@
+<ion-view view-title="Invita persone">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-divider font-18">
+        Chi desideri invitare?
+      </ion-item>
+      <ion-item class="item-icon-left">
+        <i class="icon ion-at"></i>
+        <input type="email" placeholder="Email*" ng-model="model.email">
+      </ion-item>
+
+      <ion-item class="item-icon-left">
+        <i class="icon ion-edit"></i>
+        <input type="text" placeholder="Nome*" ng-model="model.firstname">
+      </ion-item>
+
+      <ion-item class="item-icon-left">
+        <i class="icon ion-edit"></i>
+        <input type="text" placeholder="Cognome*" ng-model="model.surname">
+      </ion-item>
+
+      <ion-item class="item-divider font-18">
+        Quali informazioni vuoi mostrare?
+      </ion-item>
+      <ion-toggle ng-model="model.showPeso" toggle-class="toggle-calm">Peso</ion-toggle>
+      <ion-toggle ng-model="model.showGlicemia" toggle-class="toggle-calm">Glicemia</ion-toggle>
+      <ion-toggle ng-model="model.showFrequenza" toggle-class="toggle-calm">Frequenza</ion-toggle>
+      <ion-toggle ng-model="model.showPressione" toggle-class="toggle-calm">Pressione</ion-toggle>
+      <ion-toggle ng-model="model.showTemperatura" toggle-class="toggle-calm">Temperatura</ion-toggle>
+      <ion-toggle ng-model="model.showOssigeno" toggle-class="toggle-calm">Ossigeno</ion-toggle>
+      <ion-toggle ng-model="model.showCamera" toggle-class="toggle-calm">Movimento</ion-toggle>
+
+      <label class="item">
+        <button class="button button-block button-positive" type="button" ng-click="create()">Invita!</button>
+      </label>
+
+      <!-- <ion-item class="item-divider font-18" ng-show="model.inviteFriendList.length > 0">
+                      Amici già invitati
+                    </ion-item>
+                    <div ng-repeat="item in model.inviteFriendList">
+                      <ion-item class="item-divider font-18">
+                          Informazioni su {{item.firstname}} {{item.surname}} {{item.email}}
+                      </ion-item>
+                      <ion-toggle ng-model="item.showPeso" ng-change="update(item)" toggle-class="toggle-calm">Peso</ion-toggle>
+                      <ion-toggle ng-model="item.showGlicemia" ng-change="update(item)" toggle-class="toggle-calm">Glicemia</ion-toggle>
+                      <ion-toggle ng-model="item.showFrequenza" ng-change="update(item)" toggle-class="toggle-calm">Frequenza</ion-toggle>
+                      <ion-toggle ng-model="item.showPressione" ng-change="update(item)" toggle-class="toggle-calm">Pressione</ion-toggle>
+                      <ion-toggle ng-model="item.showTemperatura" ng-change="update(item)" toggle-class="toggle-calm">Temperatura</ion-toggle>
+                      <ion-toggle ng-model="item.showOssigeno" ng-change="update(item)" toggle-class="toggle-calm">Ossigeno</ion-toggle>
+                      <ion-toggle ng-model="item.showCamera" ng-change="update(item)" toggle-class="toggle-calm">Movimento</ion-toggle>
+                    </div> -->
+    </ion-list>
+  </ion-content>
+</ion-view>

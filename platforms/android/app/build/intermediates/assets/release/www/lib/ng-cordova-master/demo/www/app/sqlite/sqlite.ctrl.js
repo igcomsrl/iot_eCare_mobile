@@ -1,0 +1,1 @@
+angular.module("demo.sqlite.ctrl",[]).controller("SqliteCtrl",["$scope","$log","$cordovaPreferences",function($scope,$log,$cordovaPreferences){}]);

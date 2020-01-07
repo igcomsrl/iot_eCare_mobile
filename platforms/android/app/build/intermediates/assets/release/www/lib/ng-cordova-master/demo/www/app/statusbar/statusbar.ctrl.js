@@ -1,0 +1,1 @@
+angular.module("demo.statusbar.ctrl",[]).controller("StatusbarCtrl",["$scope","$cordovaStatusbar",function($scope,$cordovaStatusbar){$scope.toggleBar=function(){$cordovaStatusbar.isVisible()?$cordovaStatusbar.hide():$cordovaStatusbar.show()}}]);

@@ -1,0 +1,1 @@
+angular.module("ngCordova.plugins.spinnerDialog",[]).factory("$cordovaSpinnerDialog",["$window",function($window){return{show:function(title,message,fixed,iosOptions){return fixed=fixed||!1,$window.plugins.spinnerDialog.show(title,message,fixed,iosOptions)},hide:function(){return $window.plugins.spinnerDialog.hide()}}}]);

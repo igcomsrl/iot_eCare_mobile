@@ -1,0 +1,2 @@
+# Referenced at C:\Users\Marco Broccio\Desktop\semprevicini mobile\branch 1\Ionic\platforms\android\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:50
+-keep class android.support.multidex.MultiDexApplication { <init>(); }

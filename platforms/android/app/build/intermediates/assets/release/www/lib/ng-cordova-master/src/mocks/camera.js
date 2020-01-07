@@ -1,0 +1,1 @@
+ngCordovaMocks.factory("$cordovaCamera",["$q",function($q){return{throwsError:!1,imageData:"",getPicture:function(options){var defer=$q.defer();return this.throwsError?defer.reject("There was an error getting the picture."):(options&&(options=options),defer.resolve(this.imageData)),defer.promise}}}]);

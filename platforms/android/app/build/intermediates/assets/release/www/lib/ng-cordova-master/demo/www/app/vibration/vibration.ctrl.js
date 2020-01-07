@@ -1,0 +1,1 @@
+angular.module("demo.vibration.ctrl",[]).controller("VibrationCtrl",["$scope","$cordovaVibration",function($scope,$cordovaVibration){$scope.duration=100,$scope.vibrate=function(){$cordovaVibration.vibrate($scope.duration)}}]);

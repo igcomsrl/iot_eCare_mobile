@@ -1,0 +1,1 @@
+angular.module("demo.pushNotifications.ctrl",[]).controller("PushNotificationsCtrl",["$scope","$log","$cordovaPreferences",function($scope,$log,$cordovaPreferences){}]);

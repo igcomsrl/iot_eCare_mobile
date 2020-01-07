@@ -1,0 +1,19 @@
+<ion-view view-title="Rilevazione"> 
+        <ion-content>
+                <div ng-show="raspberryIp">
+                      
+                <span ng-bind="url"></span>
+                <!-- <iframe src="https://nodered.semprevicini.iot.felooca.eu/ui/#!/0" style="border: 0; width: 100%; min-height: 768px;" onload="hide()"></iframe>          -->
+                
+                <!-- <iframe src=" https://nodered.semprevicini.iot.felooca.eu/ui/" style="border: 0; width: 100%; min-height: 768px;" onload="hide()"></iframe>  -->
+                <iframe ng-src="{{url}}" style="border: 0; width: 100%; min-height: 768px;" onload="hide()"></iframe>   
+                </div>
+                <div ng-show="!raspberryIp">
+                        <h3>Centralina raspberry non associata!</h3>
+                        <br>
+                        <h3>Inserire l'indirizzo IP tramite la sezione Impostazioni del menu di sinistra</h3>
+                        
+                </div>
+               
+        </ion-content>
+</ion-view>
