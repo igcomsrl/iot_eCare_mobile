@@ -51,9 +51,9 @@ var metiMobile = angular.module('metiMobile', ['ionic', 'igcom-framework', 'igco
   .value('noderedEndpoint', "http://dominio:1880/")
 
   //Test
-  // .value('apiEndPoint', "http://192.168.33.174/meti.app/")
-  // .value('zeusEndpoint', "http://192.168.33.174/meti.app/")
-  // .value('noderedEndpoint', "http://212.189.207.224:1881/")
+  // .value('apiEndPoint', "http://dominio/meti.app/")
+  // .value('zeusEndpoint', "http://dominio/meti.app/")
+  // .value('noderedEndpoint', "http://dominio:1881/")
 
   .value('metiClientId', "metiApp")
 
