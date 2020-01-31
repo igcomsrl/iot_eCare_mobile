@@ -36,9 +36,9 @@ metiMobile.factory("configurationService",
                 $rootScope.noderedAuthUser = "ubuntu";
                 $rootScope.noderedAuthPassword = "G10m1R0m3";
                 $rootScope.isInvited = false; //indica se l'utente è stato inviato da un paziente
-                $rootScope.operativeCenterPhoneNumber = "3518900990" //NUmero di trimarchi
-                $rootScope.getPatientDashboardUrl ="http://212.189.207.224:3000/d/XFWJlkuiz/test-sempre-vicini";
-                $rootScope.getPatientDashboardUrlFiltered ="http://212.189.207.224:3000/dashboard/script/scripted.js";
+                $rootScope.operativeCenterPhoneNumber = "151616" //NUmero 
+                $rootScope.getPatientDashboardUrl ="http://dominio:3000/d/XFWJlkuiz/test-sempre-vicini";
+                $rootScope.getPatientDashboardUrlFiltered ="http://dominio:3000/dashboard/script/scripted.js";
             }
 
             factory.enableZeusWatchs = function () {
