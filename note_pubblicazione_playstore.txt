@@ -1,7 +1,0 @@
-1) Genera il keystore (tantum)
-2) build: ionic cordova build --release android
-3) firma: jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore semprevicini.keystore app-release-unsigned.apk alias_name
-4) zip: C:\Android\sdk\build-tools\25.0.3\zipalign -v 4 app-release-unsigned.apk semprevicini.apk
-
-https://play.google.com/apps/publish/?account=8040465646353115066#AppListPlace
-password: semprevicini
